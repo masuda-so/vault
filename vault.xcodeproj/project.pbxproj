@@ -16,6 +16,16 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A20000000000000000000070 /* Exceptions for "vault" folder in "vault" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/StoreKit/StoreKit.storekit,
+			);
+			target = 000000000000000100000000 /* vault */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* vault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20000000000000000000121 /* vaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +34,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		000000000000000000000010 /* vault */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A20000000000000000000070 /* Exceptions for "vault" folder in "vault" target */,
+			);
 			path = vault;
 			sourceTree = "<group>";
 		};

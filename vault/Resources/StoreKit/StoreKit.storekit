@@ -1,0 +1,109 @@
+{
+  "identifier" : "Vault-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "1000000001",
+      "localizations" : [
+        {
+          "description" : "One-time access to Vault Pro for 24 hours. This pass does not renew automatically.",
+          "displayName" : "Vault Pro Daily Pass",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Vault Proを24時間利用できる買い切りパスです。自動更新されません。",
+          "displayName" : "Vault Pro デイリーパス",
+          "locale" : "ja_JP"
+        }
+      ],
+      "productID" : "llc.ether.vault.pro.daily",
+      "referenceName" : "Vault Pro Daily Pass",
+      "type" : "NonRenewingSubscription"
+    }
+  ],
+  "products" : [
+  ],
+  "settings" : {
+    "_locale" : "en_US",
+    "_storefront" : "USA"
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "Vault-PRO",
+      "localizations" : [
+        {
+          "locale" : "en_US",
+          "name" : "Vault Pro"
+        },
+        {
+          "locale" : "ja_JP",
+          "name" : "Vault Pro"
+        }
+      ],
+      "name" : "Vault Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+          ],
+          "codeOffers" : [
+          ],
+          "displayPrice" : "2.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2000000001",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Monthly access to the on-device Vault assistant.",
+              "displayName" : "Vault Pro Monthly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "オンデバイスのVaultアシスタントを月ごとに利用できます。",
+              "displayName" : "Vault Pro 月額",
+              "locale" : "ja_JP"
+            }
+          ],
+          "productID" : "llc.ether.vault.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Vault Pro Monthly",
+          "subscriptionGroupID" : "Vault-PRO",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+          ],
+          "codeOffers" : [
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2000000002",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Yearly access to the on-device Vault assistant.",
+              "displayName" : "Vault Pro Yearly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "オンデバイスのVaultアシスタントを年ごとに利用できます。",
+              "displayName" : "Vault Pro 年額",
+              "locale" : "ja_JP"
+            }
+          ],
+          "productID" : "llc.ether.vault.pro.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Vault Pro Yearly",
+          "subscriptionGroupID" : "Vault-PRO",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}
