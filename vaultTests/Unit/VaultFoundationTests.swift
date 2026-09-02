@@ -39,6 +39,22 @@ final class VaultFoundationTests: XCTestCase {
     )
   }
 
+  func testActiveDailyPassIsHiddenFromPurchaseOptions() {
+    XCTAssertEqual(
+      ProductID.offeredProductIDs(dailyPassIsActive: false),
+      ProductID.all
+    )
+    XCTAssertEqual(
+      ProductID.offeredProductIDs(dailyPassIsActive: true),
+      ProductID.subscriptions
+    )
+    XCTAssertFalse(
+      ProductID.offeredProductIDs(dailyPassIsActive: true).contains(
+        VaultCommerceCatalog.dailyPassProductID
+      )
+    )
+  }
+
   @MainActor
   func testApplicationSectionsRemainDistinct() {
     let sections: Set<AppSection> = [.notes, .assistant, .pro, .settings]
@@ -156,7 +172,12 @@ final class VaultFoundationTests: XCTestCase {
   @MainActor
   func testDataContainerCreatesEditsAndDeletesNote() throws {
     let dataContainer = DataContainer(isStoredInMemoryOnly: true)
-    let note = Note(title: "Idea", text: "First")
+    let note = Note(
+      title: "Idea",
+      text: "First",
+      tags: "planning, private",
+      summary: "A short organized summary."
+    )
 
     dataContainer.context.insert(note)
     try dataContainer.context.save()
@@ -169,10 +190,41 @@ final class VaultFoundationTests: XCTestCase {
       try dataContainer.context.fetch(FetchDescriptor<Note>()).first?.text,
       "Revised"
     )
+    XCTAssertEqual(saved.tags, "planning, private")
+    XCTAssertEqual(saved.summary, "A short organized summary.")
 
     dataContainer.context.delete(saved)
     try dataContainer.context.save()
     XCTAssertTrue(try dataContainer.context.fetch(FetchDescriptor<Note>()).isEmpty)
+  }
+
+  @MainActor
+  func testManualContentEditInvalidatesGeneratedMetadata() throws {
+    let dataContainer = DataContainer(isStoredInMemoryOnly: true)
+    let note = Note(
+      title: "Organized",
+      text: "Original",
+      tags: "planning, private, journal",
+      summary: "Summary of the original text."
+    )
+    dataContainer.context.insert(note)
+    try dataContainer.context.save()
+
+    note.applyManualEdit(
+      title: "Edited",
+      text: "Revised",
+      updatedAt: Date(timeIntervalSince1970: 123)
+    )
+    try dataContainer.context.save()
+
+    let saved = try XCTUnwrap(
+      dataContainer.context.fetch(FetchDescriptor<Note>()).first
+    )
+    XCTAssertEqual(saved.title, "Edited")
+    XCTAssertEqual(saved.text, "Revised")
+    XCTAssertNil(saved.tags)
+    XCTAssertNil(saved.summary)
+    XCTAssertEqual(saved.updatedAt, Date(timeIntervalSince1970: 123))
   }
 
   @MainActor
