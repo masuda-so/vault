@@ -17,11 +17,6 @@ nonisolated struct AIRequest: Codable, Equatable, Sendable {
   }
 }
 
-/// Text returned by the on-device model.
-nonisolated struct AIResponse: Codable, Equatable, Sendable {
-  let text: String
-}
-
 /// A reason the on-device model can't accept requests.
 nonisolated enum AIUnavailableReason: String, Codable, CaseIterable, Equatable, Sendable {
   case unsupportedOS
