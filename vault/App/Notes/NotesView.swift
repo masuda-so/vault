@@ -56,10 +56,21 @@ private struct NoteList: View {
                   .font(.headline)
                   .lineLimit(1)
 
-                if !note.text.isEmpty {
+                if let summary = note.summary, !summary.isEmpty {
+                  Text(summary)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+                } else if !note.text.isEmpty {
                   Text(note.text)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
+                }
+
+                if let tags = note.tags, !tags.isEmpty {
+                  Text(tags)
+                    .font(.caption)
+                    .foregroundStyle(.tertiary)
+                    .lineLimit(1)
                 }
 
                 Text(
