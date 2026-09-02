@@ -2,7 +2,9 @@
 
 Vault is a private place to capture, search, and rediscover notes. It includes
 SwiftData persistence and ordinary local title/body search ordered by the most
-recent update. No ranking or weighted-search algorithm is implemented.
+recent update. Its on-device organizer produces an editable title, tags, and
+summary preview that is applied or saved only after explicit confirmation. No
+ranking or weighted-search algorithm is implemented.
 
 ## Initial navigation
 

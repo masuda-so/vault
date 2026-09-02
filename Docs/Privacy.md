@@ -1,15 +1,16 @@
 # Vault Privacy Policy
 
-Effective date: July 25, 2026
+Effective date: September 1, 2026
 
 Vault is provided by Ether LLC. This policy explains how the app handles data.
 
 ## Data stored by the app
 
-Vault stores the notes you create, including their titles, text, and dates, in the
-app’s local SwiftData store on your device. The app does not include an analytics
-SDK, advertising SDK, account system, remote content database, or photo-library
-integration.
+Vault stores the notes you create, including their titles, text, optional tags and
+summaries, and dates, in the app’s local SwiftData store on your device. Tags and
+summaries produced with the assistant are stored only after you review and confirm
+the proposed changes. The app does not include an analytics SDK, advertising SDK,
+account system, remote content database, or photo-library integration.
 
 ## On-device assistant
 

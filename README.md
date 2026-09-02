@@ -18,6 +18,8 @@ local title/body search, and deletion with visible save and delete failure state
 ## Intelligence and commerce
 
 The assistant uses Apple Foundation Models on supported devices and languages.
+It can organize an existing or newly entered note into an editable title, tags,
+and summary preview; no note changes until the person confirms Apply or Save.
 The local StoreKit configuration provides:
 
 - `llc.ether.vault.pro.daily`: non-renewing 24-hour Daily Pass.
