@@ -64,9 +64,7 @@ struct NoteEditorView: View {
     do {
       try context.performTransactionOrRollback {
         if let note {
-          note.title = trimmedTitle
-          note.text = trimmedText
-          note.updatedAt = .now
+          note.applyManualEdit(title: trimmedTitle, text: trimmedText)
         } else {
           context.insert(
             Note(
