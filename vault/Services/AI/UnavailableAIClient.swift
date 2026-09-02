@@ -14,7 +14,7 @@ nonisolated struct UnavailableAIClient: AIClient {
     }
   }
 
-  func respond(to request: AIRequest) async throws -> AIResponse {
+  func respond(to request: AIRequest) async throws -> NoteOrganizationDraft {
     guard !request.prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
       throw AIError.emptyPrompt
     }

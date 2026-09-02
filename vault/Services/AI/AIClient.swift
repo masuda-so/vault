@@ -1,12 +1,12 @@
 import Foundation
 
-/// Generates product-specific text with the best model available on the device.
+/// Generates structured Vault organization suggestions with the best available model.
 nonisolated protocol AIClient: Sendable {
   /// Returns the model's current availability.
   var availability: AIAvailability { get async }
 
-  /// Responds to a validated request.
-  func respond(to request: AIRequest) async throws -> AIResponse
+  /// Responds to a validated request with editable note metadata.
+  func respond(to request: AIRequest) async throws -> NoteOrganizationDraft
 }
 
 /// Creates the AI client used by the application.

@@ -26,7 +26,7 @@ final class AppEnvironment {
       scheduleNextNonRenewingExpiration()
     }
   }
-  var assistantResponse: String?
+  var assistantResponse: NoteOrganizationDraft?
   var assistantErrorMessage: String?
   var isGenerating = false
   var hasLoadedInitialState = false
@@ -65,6 +65,11 @@ final class AppEnvironment {
 
     aiAvailability = await availability
     entitlements = await currentEntitlements
+  }
+
+  /// Refreshes model availability after system settings or assets may have changed.
+  func refreshAIAvailability() async {
+    aiAvailability = await assistant.availability
   }
 
   /// Restores App Store purchases and immediately applies the refreshed access state.
@@ -126,6 +131,10 @@ final class AppEnvironment {
 
     assistantResponse = nil
     assistantErrorMessage = nil
+
+    if !isAIAvailable {
+      await refreshAIAvailability()
+    }
 
     guard isAIAvailable else {
       assistantErrorMessage = String(localized: "The on-device assistant is unavailable.")

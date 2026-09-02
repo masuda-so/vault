@@ -41,7 +41,7 @@ struct ProductDefinition {
     assistantInstructions:
       "Help organize the user's own notes. Do not invent facts, and clearly separate suggestions from source content.",
     assistantPromptPrefix:
-      "Suggest a concise title, three useful tags, and a short summary for this note:",
+      "Suggest a concise title, exactly three distinct useful tags, and a short factual summary for this note. Preserve its meaning and use only information found in the source.",
     settingsPrivacySummary: String(
       localized: "Your notes stay on this device."
     ),
