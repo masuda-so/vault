@@ -11,7 +11,8 @@ or public-release claim.
 - Persistent-store search across title/body with reverse `updatedAt` ordering and
   no remote index or USGS integration.
 - On-device Foundation Models organizer with availability fallback, explicit user
-  action, cancellation, stable error vocabulary, and no remote AI provider.
+  action, editable title/tags/summary preview, confirmation before applying or
+  saving, cancellation, stable error vocabulary, and no remote AI provider.
 - StoreKit 2 loading, purchase, restore, verified entitlement/finish, updates,
   refund/revocation filtering, and device-clock expiry.
 - Daily Pass `llc.ether.vault.pro.daily`: non-renewing, 24 hours from latest
