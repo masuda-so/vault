@@ -8,6 +8,9 @@ on:
       - '.github/workflows/storekit-validation.yml'
       - 'vault/Resources/StoreKit/StoreKit.storekit'
       - 'vaultTests/Integration/StoreKitIntegrationTests.swift'
+      - 'vault/App/VaultApp.swift'
+      - 'vault/App/General/AppEnvironment.swift'
+      - 'vault.xcodeproj/xcshareddata/xcschemes/vault.xcscheme'
 
 permissions:
   contents: read
