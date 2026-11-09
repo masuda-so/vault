@@ -4,12 +4,17 @@ Vault is a private place to capture, search, and rediscover notes. It includes
 SwiftData persistence and ordinary local title/body search ordered by the most
 recent update. No ranking or weighted-search algorithm is implemented.
 
-## Initial navigation
+## Navigation
 
 - Notes
 - Assistant
 - Pro
 - Settings
+
+## Core experience
+
+Notes are stored on device with SwiftData. The app supports creation, editing,
+local title/body search, and deletion with visible save and delete failure states.
 
 ## Commerce baseline
 
