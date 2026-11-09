@@ -1,7 +1,9 @@
 # Vault release readiness
 
-Status updated: August 30, 2026. This is a release checklist, not a submission
-or public-release claim.
+This document defines the current release scope and remaining gates. It does not
+set a submission or public-release date. Because the implementation and project
+configuration have changed, all technical checks below must be rerun against the
+current tree before submission.
 
 ## Implemented v1
 
@@ -22,7 +24,7 @@ or public-release claim.
 - Privacy manifest, English/Japanese String Catalogs, fixed production legal
   URLs, current layered `Resources/AppIcon.icon`, and third-party notices.
 
-## Required local re-verification
+## Current technical gate
 
 The working tree has changed since the prior local verification record. Treat
 all build, test, Analyze, and Archive results as pending. Use the currently
@@ -78,8 +80,8 @@ the final determination.
 
 ## External or human blockers
 
-Only Apple credentials/signing, App Store Connect, a compatible Apple StoreKit
-environment, TestFlight/physical-device verification, public legal-page
-deployment, and final legal/content/accessibility/UI judgment may remain outside
-the local reconstruction. No signing, validation, upload, release, deployment,
-publication, or external message is authorized here.
+Only Apple credentials/signing, App Store Connect state, an Apple-compatible
+StoreKit environment, TestFlight/physical-device verification, public legal and
+support URL acceptance, and final legal/content/accessibility/UI judgment may
+remain external. No signing, validation, upload, release, deployment,
+publication, or external message is authorized by this document.
