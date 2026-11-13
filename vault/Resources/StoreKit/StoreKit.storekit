@@ -7,12 +7,12 @@
       "internalID" : "1000000001",
       "localizations" : [
         {
-          "description" : "One-time access to Vault Pro for 24 hours. This pass does not renew automatically.",
+          "description" : "24-hour Pro access. No automatic renewal.",
           "displayName" : "Vault Pro Daily Pass",
           "locale" : "en_US"
         },
         {
-          "description" : "Vault Proを24時間利用できる買い切りパスです。自動更新されません。",
+          "description" : "Proを24時間利用。自動更新はありません。",
           "displayName" : "Vault Pro デイリーパス",
           "locale" : "ja_JP"
         }
@@ -34,11 +34,13 @@
       "localizations" : [
         {
           "locale" : "en_US",
-          "name" : "Vault Pro"
+          "displayName" : "Vault Pro",
+          "description" : ""
         },
         {
           "locale" : "ja_JP",
-          "name" : "Vault Pro"
+          "displayName" : "Vault Pro",
+          "description" : ""
         }
       ],
       "name" : "Vault Pro",
@@ -55,12 +57,12 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "Monthly access to the on-device Vault assistant.",
+              "description" : "Monthly Pro access. Renews automatically.",
               "displayName" : "Vault Pro Monthly",
               "locale" : "en_US"
             },
             {
-              "description" : "オンデバイスのVaultアシスタントを月ごとに利用できます。",
+              "description" : "Proを1か月利用。自動更新します。",
               "displayName" : "Vault Pro 月額",
               "locale" : "ja_JP"
             }
@@ -83,12 +85,12 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "Yearly access to the on-device Vault assistant.",
+              "description" : "Yearly Pro access. Renews automatically.",
               "displayName" : "Vault Pro Yearly",
               "locale" : "en_US"
             },
             {
-              "description" : "オンデバイスのVaultアシスタントを年ごとに利用できます。",
+              "description" : "Proを1年間利用。自動更新します。",
               "displayName" : "Vault Pro 年額",
               "locale" : "ja_JP"
             }
