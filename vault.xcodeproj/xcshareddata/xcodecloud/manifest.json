@@ -1,0 +1,9 @@
+{
+  "id" : "d02729b8-45cd-43f4-8b00-84b7cb275bce",
+  "targets" : [
+    {
+      "id" : "25093bcc-9ad8-4d23-affd-f55802a3d80b",
+      "name" : "vault"
+    }
+  ]
+}
